@@ -1,0 +1,52 @@
+<div class="main-padding">
+    <div class="container p-5">
+        <center class="mb-5">
+            <h1>Cost Estimate Calculator</h1>
+        </center>
+        <form id="cost-calculator-form" class="mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group" id ="cases">
+                        <label for="case-study">Number of Case Study</label>
+                        <input type="number" class="form-control" placeholder="Number of current case study" name="cases">
+                        <span class="help-text text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" id="growth">
+                        <label for="case-study">Growth Percentage per Month</label>
+                        <input type="text" class="form-control" placeholder="Number of Study Growth per month in %" name="growth">
+                        <span class="help-text text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" id="months">
+                        <label for="case-study">Number of Months to Forecast</label>
+                        <input type="number" class="form-control" placeholder="Number of Months to Forecast" name="months">
+                        <span class="help-text text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <button class="btn btn-success"  data-do="compute-cost" data-on="click">Compute for Cost</button>
+            </div>
+        </form>
+        <div id="cost-estimate" class="d-none">
+            <h2 id="total-estimate" class="mb-4"></h2>
+            <h2>Breakdown:</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Billing Date</th>
+                        <th>Number of Studies</th>
+                        <!-- <th>Ram Consumed (MB)</th>
+                        <th>Storage Consumed (MB)</th> -->
+                        <th>Cost (USD)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot class="font-weight-bold"></tfoot>
+            </table>
+        </div>
+    </div>
+</div>
